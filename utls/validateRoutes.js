@@ -1,11 +1,10 @@
 const validateObject = require("./validateObject");
-const db_action = require("../data/accounts-model");
+const db_action = require("../data/model");
 
 function validateAccount(req, res, next) {
     let post =
     {
-        name: req.body.name ? req.body.name.substring(0,128) : undefined,
-        budget: req.body.budget
+        name: req.body.name ? req.body.name.substring(0,128) : undefined
     }
 
     let str = validateObject(post);
